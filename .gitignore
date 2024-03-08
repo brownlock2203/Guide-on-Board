@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+assets/js/admin.*.js
+assets/js/frontend.*.js
+assets/js/vendors.*.js
+assets/js/runtime.*.js
+assets/js/runtime.*.json
+assets/js/style.*.js
