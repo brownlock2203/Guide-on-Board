@@ -1,0 +1,19 @@
+{
+    "name": "wpm/vue-wp-plugin-starter",
+    "description": "A WordPress Vue 3 starter plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "WP Monkey",
+            "email": "hello@wp-monkey.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "includes/"
+        }
+    }
+}

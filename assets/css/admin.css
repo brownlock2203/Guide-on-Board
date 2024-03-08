@@ -1,0 +1,126 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/admin/App.vue?vue&type=style&index=0&id=3a030f38&lang=css ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+
+body{
+    margin: 0;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/admin/pages/configuration/Index.vue?vue&type=style&index=0&id=23881df6&lang=scss&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+a[data-v-23881df6] {
+  color: #282E4B;
+}
+a.router-link-exact-active[data-v-23881df6] {
+  color: #282E4B;
+  font-weight: bold;
+  box-shadow: 0 0 0 0.2rem transparent;
+  border: none;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/admin/pages/Home.vue?vue&type=style&index=0&id=9e5983fa&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+
+body[data-v-9e5983fa]{
+    margin: 0;
+}
+input[type="search"][data-v-9e5983fa]{
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    margin: 0 10px 0 10px;
+}
+input[type="search"][data-v-9e5983fa]::placeholder{
+    font-size: 12px;
+}
+input[data-v-9e5983fa]:focus{
+    box-shadow: 0 0 0 0.2rem transparent;
+}
+a[data-v-9e5983fa]:focus{
+    font-weight: bold;
+    box-shadow: 0 0 0 0.2rem transparent;
+    border: none;
+}
+input[type="file"][data-v-9e5983fa]{
+    display: none;
+}
+input[type="text"][data-v-9e5983fa]{
+    padding: 10px 0 10px 10px;
+}
+textarea[data-v-9e5983fa] {
+    padding: 10px 0 10px 10px;
+    height: 100px;
+    resize: none;
+}
+
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/admin/pages/CategorieDetails.vue?vue&type=style&index=0&id=0bb063a2&lang=scss&scoped=true ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************/
+body[data-v-0bb063a2] {
+  margin: 0;
+}
+input[type=search][data-v-0bb063a2] {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  margin: 0 10px 0 10px;
+}
+input[type=search][data-v-0bb063a2]::placeholder {
+  font-size: 12px;
+}
+input[data-v-0bb063a2]:focus {
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+a[data-v-0bb063a2]:focus {
+  font-weight: bold;
+  box-shadow: 0 0 0 0.2rem transparent;
+  border: none;
+}
+input[type=file][data-v-0bb063a2] {
+  display: none;
+}
+input[type=text][data-v-0bb063a2] {
+  padding: 10px 0 10px 10px;
+}
+input[data-v-0bb063a2]:focus {
+  box-shadow: 0 0 0 0.2 transparent;
+}
+textarea[data-v-0bb063a2] {
+  padding: 10px 0 10px 10px;
+  height: 100px;
+  resize: none;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/admin/pages/GuideContent.vue?vue&type=style&index=0&id=6e714c01&scoped=true&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+
+
+/* .fade-enter-active, .fade-leave-active {
+    
+    transition: opacity 0.5s;
+
+}
+
+.fade-enter, .fade-leave-to {
+
+    opacity: 0;
+
+} */
+
+
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/admin/scss/admin.scss ***!
+  \********************************************************************************************************************/
+body {
+  margin: 0;
+}
+
+.wrap {
+  margin: 0;
+}
+
+#wpcontent {
+  padding-left: 0;
+}
