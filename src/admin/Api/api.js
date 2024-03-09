@@ -112,7 +112,7 @@ const api = {
     
         updateSection: async (categorie_id, guide_id, section_id, updatedData) => {
     
-            const update_section = await axios.put(gob_rest_url+'/gob-categorie/'+categorie_id+'/gob-guides/'+guide_id+'/gob-sections'+section_id, updatedData);
+            const update_section = await axios.put(gob_rest_url+'/gob-categorie/'+categorie_id+'/gob-guides/'+guide_id+'/gob-sections/'+section_id, updatedData);
     
             return update_section.data;
     

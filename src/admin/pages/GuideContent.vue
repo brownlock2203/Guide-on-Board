@@ -133,14 +133,14 @@
                     </svg>
                 </div>
                 
-                <div v-for="section in sections" :key="section.id" >
+                <div v-for="(section, index) in sections" :key="`section-${section.id}-${index}`" >
                     
                     <!-- Section icon and content Space -->
                     <div class="flex justify-between ml-[30px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
                         
                         <!-- Folder and Section Name -->
                         <div class="flex flex-row items-center space-x-4">
-                            <svg viewBox="0 0 1024 1024" class="icon w-10 h-10"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 1024 1024" class="icon w-10 h-10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M853.333333 256H469.333333l-85.333333-85.333333H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v170.666667h853.333334v-85.333334c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFA000" />
                                 <path d="M853.333333 256H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v426.666667c0 46.933333 38.4 85.333333 85.333334 85.333333h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333333V341.333333c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFCA28" />
                             </svg>
@@ -151,7 +151,7 @@
                         <div class="flex flex-row space-x-4">
 
                             <!-- Show sous_section -->
-                            <div class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="showSection(category.id, guide.ID, section.id)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section, 'transform rotate-180': sous_section }">
+                            <div class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="() => show_sous_section(section.id, section.sous_section, section.etape)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section, 'transform rotate-180': sous_section }">
                                 <svg v-if="!sous_section" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="h-6 w-6">
                                     <g>
                                         <g>
@@ -159,7 +159,7 @@
                                         </g>
                                     </g>
                                 </svg>
-                                <svg v-else fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.011 512.011" xml:space="preserve" class="h-6 w-6">
+                                <svg v-if="sous_section" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.011 512.011" xml:space="preserve" class="h-6 w-6">
                                     <g>
                                         <g>
                                             <path d="M505.752,358.248L271.085,123.582c-8.331-8.331-21.839-8.331-30.17,0L6.248,358.248c-8.331,8.331-8.331,21.839,0,30.17s21.839,8.331,30.17,0L256,168.837l219.582,219.582c8.331,8.331,21.839,8.331,30.17,0S514.083,366.58,505.752,358.248z"/>
@@ -171,7 +171,6 @@
                             <!-- Edit Icon -->
                             <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="ShowPopupEdit(section.id)">
 
-                                {{ console.log(section.id) }}
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
                                     <path d="M18.3785 8.44975L11.4637 15.3647C11.1845 15.6439 10.8289 15.8342 10.4417 15.9117L7.49994 16.5L8.08829 13.5582C8.16572 13.1711 8.35603 12.8155 8.63522 12.5363L15.5501 5.62132M18.3785 8.44975L19.7927 7.03553C20.1832 6.64501 20.1832 6.01184 19.7927 5.62132L18.3785 4.20711C17.988 3.81658 17.3548 3.81658 16.9643 4.20711L15.5501 5.62132M18.3785 8.44975L15.5501 5.62132" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M5 20H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -187,11 +186,9 @@
                                 </div>
                             </button>
                         </div>
-                    </div>
-        
-        
+                    </div>         
                     <!-- Sous-Section icon and content Space -->
-                    <div v-if="sous_section" class="flex justify-between ml-[60px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
+                    <div v-if="sectionId === section.id && sous_section" class="flex justify-between ml-[60px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
                         
                         <!-- Folder and Section Name -->
                         <div class="flex flex-row items-center space-x-4">
@@ -200,11 +197,18 @@
                                 <path d="M853.333333 256H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v426.666667c0 46.933333 38.4 85.333333 85.333334 85.333333h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333333V341.333333c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFCA28" />
                             </svg>
                             <p class="text-black font-bold text-[15px]">{{ section.sous_section }}</p>
+<!--     
+                            {{ console.log(sectionId) }}
+    
+                            {{ console.log(s_s_content) }}
+    
+                            {{ console.log(step_content) }} -->
+    
                         </div>
                         
                         <!-- Others Icons -->
                         <div class="flex flex-row space-x-4">
-
+    
                             <!-- Show step -->
                             <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="Show_step" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !step, 'transform rotate-180': step }">
                                     <svg v-if="!step" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="h-6 w-6">
@@ -247,9 +251,9 @@
                         </div>
                     </div>
                 
-
+    
                     <!-- Step icon and content Space -->
-                    <div v-if="step" class="flex justify-between ml-[100px] pl-[30px] pr-[50px] py-[10px] flex items-center mt-[15px]">
+                    <div v-if="sectionId === section.id && step" class="flex justify-between ml-[100px] pl-[30px] pr-[50px] py-[10px] flex items-center mt-[15px]">
                         
                         <!-- Folder and Section Name -->
                         <div class="flex flex-row items-center space-x-4">
@@ -278,11 +282,11 @@
                             </div>
                         </div>
                     </div>
-
-                    
                 </div>
 
-                <!-- Popup Edit Section -->
+                
+
+                <!-- Popup Edit -->
                 <div v-if="ShowEdit">
                     <div class="fixed top-0 bottom-0 left-0 right-0 z-50 bg-[#00000085] flex justify-center items-center">
                         <div class="px-[50px] box-content bg-white rounded-xl">
@@ -299,7 +303,7 @@
                                 
                                 <!-- Name section -->
                                 <div class="my-[40px] items-center">
-                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom de la section</label>
+                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom</label>
                                     <input type="text" v-model="type.title" placeholder="entrer le nom de la section" class="w-[400px] border" required>
                                 </div> 
 
@@ -409,15 +413,9 @@ import api from '../Api/api.js';
 
 import { useRoute } from 'vue-router';
 
-const sous_section = ref(false);
+
 
 const step = ref(false);
-
-function Show_step() {
-
-    step.value = !step.value;
-
-}
 
 const ShowThat = ref(false);
 
@@ -455,18 +453,49 @@ function ShowPopupCreate() {
     
     
     ShowThat.value = !ShowThat.value; 
+
+    
     
 };
 
-const sectionId = ref(0)
+const sectionId = ref(null)
+
+const s_s_content = ref(null)
+
+const step_content = ref(null)
 
 function ShowPopupEdit(section_id = null) {
     
+
     sectionId.value = section_id;
 
     ShowEdit.value = !ShowEdit.value;
 
 };
+
+const sous_section = ref(false);
+
+function show_sous_section(section_id) {
+
+    sectionId.value = section_id;
+
+    // s_s_content.value = ss_content;
+
+    // step_content.value = s_content;
+
+    sous_section.value = !sous_section.value;
+
+    step.value = false;
+
+};
+
+function Show_step() {
+
+    step.value = !step.value;
+
+    // step_content.value = s_content;
+
+}
 
 onMounted( async () => {    
 
@@ -488,15 +517,9 @@ const showSection = async(categorie_id, guide_id, section_id) => {
 
         console.log(response);
 
-        sous_section.value = !sous_section.value;
+        showSections(categoryId.value, postId.value);
 
-        step.value = false;
-
-        console.log(response.title);
-
-        console.log(sections.sous_section);
-
-        // console.log(step.value);
+        show_sous_section();
 
     }
 
