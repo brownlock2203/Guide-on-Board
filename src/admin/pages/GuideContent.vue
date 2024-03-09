@@ -123,7 +123,7 @@
                 </div>
             
 
-                <!-- SECTION PART -->
+                <!-- ///////////////////////////////// SECTION PART /////////////////////////////////////////////// -->
 
                 <!-- Add section -->
                 <div @click="ShowPopupCreate" class="shadow-md w-fit mx-auto px-[10px] py-[10px] flex justify-center items-center hover:cursor-pointer hover:bg-opacity-20 space-x-2 bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg">
@@ -132,8 +132,78 @@
                         <path d="M15 12H12M12 12H9M12 12V9M12 12V15M17 21H7C4.79086 21 3 19.2091 3 17V7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7V17C21 19.2091 19.2091 21 17 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </div>
+
+                <!-- Is_Spinner -->
+                <div v-if="is_spinner">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0); display: block; shape-rendering: auto;" width="244px" height="244px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                        <g transform="translate(70,50)">
+                            <g transform="rotate(0)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="1">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.8413461538461539s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.8413461538461539s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(64.14213562373095,64.14213562373095)">
+                            <g transform="rotate(45)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.875">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.7211538461538461s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.7211538461538461s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(50,70)">
+                            <g transform="rotate(90)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.75">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.6009615384615384s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.6009615384615384s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(35.85786437626905,64.14213562373095)">
+                            <g transform="rotate(135)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.625">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.4807692307692307s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.4807692307692307s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(30,50)">
+                            <g transform="rotate(180)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.5">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.3605769230769231s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.3605769230769231s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(35.85786437626905,35.85786437626905)">
+                            <g transform="rotate(225)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.375">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.24038461538461536s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.24038461538461536s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(49.99999999999999,30)">
+                            <g transform="rotate(270)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.25">
+                                    <animateTransform attributeName="transform" type="scale" begin="-0.12019230769230768s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="-0.12019230769230768s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                        <g transform="translate(64.14213562373095,35.85786437626905)">
+                            <g transform="rotate(315)">
+                                <circle cx="0" cy="0" r="6" fill="#414dc7" fill-opacity="0.125">
+                                    <animateTransform attributeName="transform" type="scale" begin="0s" values="1.55 1;1 1" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite"></animateTransform>
+                                    <animate attributeName="fill-opacity" keyTimes="0;1" dur="0.9615384615384615s" repeatCount="indefinite" values="1;0" begin="0s"></animate>
+                                </circle>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
                 
-                <div v-for="(section, index) in sections" :key="`section-${section.id}-${index}`" >
+                <div v-for="(section) in sections" :key="section.id" >
                     
                     <!-- Section icon and content Space -->
                     <div class="flex justify-between ml-[30px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
@@ -151,7 +221,7 @@
                         <div class="flex flex-row space-x-4">
 
                             <!-- Show sous_section -->
-                            <div class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="() => show_sous_section(section.id, section.sous_section, section.etape)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section, 'transform rotate-180': sous_section }">
+                            <div class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="show_sous_section(section.id)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section, 'transform rotate-180': sous_section }">
                                 <svg v-if="!sous_section" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="h-6 w-6">
                                     <g>
                                         <g>
@@ -187,7 +257,8 @@
                             </button>
                         </div>
                     </div>         
-                    <!-- Sous-Section icon and content Space -->
+
+                    <!-- Sous_Section icon and content Space -->
                     <div v-if="sectionId === section.id && sous_section" class="flex justify-between ml-[60px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
                         
                         <!-- Folder and Section Name -->
@@ -197,13 +268,9 @@
                                 <path d="M853.333333 256H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v426.666667c0 46.933333 38.4 85.333333 85.333334 85.333333h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333333V341.333333c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFCA28" />
                             </svg>
                             <p class="text-black font-bold text-[15px]">{{ section.sous_section }}</p>
-<!--     
-                            {{ console.log(sectionId) }}
-    
-                            {{ console.log(s_s_content) }}
-    
-                            {{ console.log(step_content) }} -->
-    
+
+                            <!-- {{ console.log(section.sous_section) }} -->
+
                         </div>
                         
                         <!-- Others Icons -->
@@ -228,7 +295,7 @@
                             </div>
         
                             <!-- Edit Icon -->
-                            <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20">
+                            <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="ShowPopup_S_S_Edit(section.id)">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
                                     <path d="M18.3785 8.44975L11.4637 15.3647C11.1845 15.6439 10.8289 15.8342 10.4417 15.9117L7.49994 16.5L8.08829 13.5582C8.16572 13.1711 8.35603 12.8155 8.63522 12.5363L15.5501 5.62132M18.3785 8.44975L19.7927 7.03553C20.1832 6.64501 20.1832 6.01184 19.7927 5.62132L18.3785 4.20711C17.988 3.81658 17.3548 3.81658 16.9643 4.20711L15.5501 5.62132M18.3785 8.44975L15.5501 5.62132" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M5 20H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -267,7 +334,7 @@
                         <div class="flex flex-row space-x-4">
         
                             <!-- Edit Icon -->
-                            <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20">
+                            <div class="bg-[#04A56B] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="ShowPopup_S_Edit(section.id)">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
                                     <path d="M18.3785 8.44975L11.4637 15.3647C11.1845 15.6439 10.8289 15.8342 10.4417 15.9117L7.49994 16.5L8.08829 13.5582C8.16572 13.1711 8.35603 12.8155 8.63522 12.5363L15.5501 5.62132M18.3785 8.44975L19.7927 7.03553C20.1832 6.64501 20.1832 6.01184 19.7927 5.62132L18.3785 4.20711C17.988 3.81658 17.3548 3.81658 16.9643 4.20711L15.5501 5.62132M18.3785 8.44975L15.5501 5.62132" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M5 20H19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -286,7 +353,9 @@
 
                 
 
-                <!-- Popup Edit -->
+                <!-- /////////////////////////////////////// POPUPS EDIT ////////////////////////////////////////// -->
+
+                <!-- Section Edit -->
                 <div v-if="ShowEdit">
                     <div class="fixed top-0 bottom-0 left-0 right-0 z-50 bg-[#00000085] flex justify-center items-center">
                         <div class="px-[50px] box-content bg-white rounded-xl">
@@ -303,14 +372,96 @@
                                 
                                 <!-- Name section -->
                                 <div class="my-[40px] items-center">
-                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom</label>
+                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom de la section</label>
                                     <input type="text" v-model="type.title" placeholder="entrer le nom de la section" class="w-[400px] border" required>
                                 </div> 
-
+                                
                                 <!-- Button -->
                                 <div class="space-x-5 mb-[20px] flex justify-center">
                                     <!-- Close button -->
                                     <button class="text-[#29305B] font-bold py-[10px] px-[30px] border-2 border-[#414DC7] rounded-md hover:opacity-70" @click="ShowPopupEdit()">
+                                        Close
+                                    </button>
+
+                                    <!-- Next button -->
+                                    <button class="text-white bg-[#414DC7] font-bold py-[10px] px-[30px]  rounded-md flex flex-row" type="submit">
+                                        Submit
+                                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white ml-[5px]">
+                                            <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                        </svg> -->
+                                    </button>
+                                                            
+                                </div>
+                            </form>
+                        </div>
+                    </div>        
+                </div>
+                
+                <!-- Sous_Section Edit -->
+                <div v-if="Show_S_S_Edit">
+                    <div class="fixed top-0 bottom-0 left-0 right-0 z-50 bg-[#00000085] flex justify-center items-center">
+                        <div class="px-[50px] box-content bg-white rounded-xl">
+
+                            <!-- Close Popup -->
+                            <div class="flex justify-end">                                
+                                <svg fill="#000000" width="30px" height="50px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" class="active:opacity-70 cursor-pointer" @click="ShowPopup_S_S_Edit()">
+                                    <path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"/>
+                                </svg>
+                            </div>
+                            <form @submit.prevent="edit_Section()">
+
+                                <!-- {{ console.log(section.id) }}; -->
+                                
+                                <!-- Name section -->
+                                <div class="my-[40px] items-center">
+                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom de la sous_section</label>
+                                    <input type="text" v-model="type.sous_section" placeholder="entrer le nom de la section" class="w-[400px] border" required>
+                                </div> 
+                                <!-- Button -->
+                                <div class="space-x-5 mb-[20px] flex justify-center">
+                                    <!-- Close button -->
+                                    <button class="text-[#29305B] font-bold py-[10px] px-[30px] border-2 border-[#414DC7] rounded-md hover:opacity-70" @click="ShowPopup_S_S_Edit()">
+                                        Close
+                                    </button>
+
+                                    <!-- Next button -->
+                                    <button class="text-white bg-[#414DC7] font-bold py-[10px] px-[30px]  rounded-md flex flex-row" type="submit">
+                                        Submit
+                                        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white ml-[5px]">
+                                            <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                        </svg> -->
+                                    </button>
+                                                            
+                                </div>
+                            </form>
+                        </div>
+                    </div>        
+                </div>
+                
+                <!-- Step Edit -->
+                <div v-if="Show_S_Edit">
+                    <div class="fixed top-0 bottom-0 left-0 right-0 z-50 bg-[#00000085] flex justify-center items-center">
+                        <div class="px-[50px] box-content bg-white rounded-xl">
+
+                            <!-- Close Popup -->
+                            <div class="flex justify-end">                                
+                                <svg fill="#000000" width="30px" height="50px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" class="active:opacity-70 cursor-pointer" @click="ShowPopup_S_Edit()">
+                                    <path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"/>
+                                </svg>
+                            </div>
+                            <form @submit.prevent="edit_Section()">
+
+                                <!-- {{ console.log(section.id) }}; -->
+                                
+                                <!-- Name section -->
+                                <div class="my-[40px] items-center">
+                                    <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nouveau nom de l'étape</label>
+                                    <input type="text" v-model="type.etape" placeholder="entrer le nom de la section" class="w-[400px] border" required>
+                                </div> 
+                                <!-- Button -->
+                                <div class="space-x-5 mb-[20px] flex justify-center">
+                                    <!-- Close button -->
+                                    <button class="text-[#29305B] font-bold py-[10px] px-[30px] border-2 border-[#414DC7] rounded-md hover:opacity-70" @click="ShowPopup_S_Edit()">
                                         Close
                                     </button>
 
@@ -378,6 +529,18 @@
                         <input type="text" v-model="type.title" placeholder="entrer le nom de la section" class="w-[400px] border" required>
                     </div> 
 
+                    <!-- Name sous_section -->
+                    <div class="my-[40px] items-center">
+                        <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nom de la section</label>
+                        <input type="text" v-model="type.sous_section" placeholder="entrer le nom de la section" class="w-[400px] border" required>
+                    </div> 
+
+                    <!-- Name etape -->
+                    <div class="my-[40px] items-center">
+                        <label class="text-[#29305B] mr-[55px] text-[15px] font-semibold">Nom de la section</label>
+                        <input type="text" v-model="type.etape" placeholder="entrer le nom de la section" class="w-[400px] border" required>
+                    </div> 
+
                     <!-- Button -->
                     <div class="space-x-5 mb-[20px] flex justify-center">
                         <!-- Close button -->
@@ -421,6 +584,10 @@ const ShowThat = ref(false);
 
 const ShowEdit = ref(false);
 
+const Show_S_S_Edit = ref(false);
+
+const Show_S_Edit = ref(false);
+
 const route = useRoute();
 
 const postId = ref(route.params.postId);
@@ -445,7 +612,11 @@ function isVisibility() {
 
 const type = ref({
 
-    title: ""
+    title: "",
+
+    sous_section:"",
+
+    etape:""
 
 });
 
@@ -460,12 +631,7 @@ function ShowPopupCreate() {
 
 const sectionId = ref(null)
 
-const s_s_content = ref(null)
-
-const step_content = ref(null)
-
 function ShowPopupEdit(section_id = null) {
-    
 
     sectionId.value = section_id;
 
@@ -473,19 +639,31 @@ function ShowPopupEdit(section_id = null) {
 
 };
 
+function ShowPopup_S_S_Edit(section_id=null){
+
+    sectionId.value = section_id;
+
+    Show_S_S_Edit.value = !Show_S_S_Edit.value;
+
+}
+
+function ShowPopup_S_Edit(section_id=null){
+
+    sectionId.value = section_id;
+
+    Show_S_Edit.value = !Show_S_Edit.value;
+
+}
+
 const sous_section = ref(false);
 
 function show_sous_section(section_id) {
 
-    sectionId.value = section_id;
-
-    // s_s_content.value = ss_content;
-
-    // step_content.value = s_content;
-
-    sous_section.value = !sous_section.value;
-
-    step.value = false;
+        sectionId.value = section_id;
+    
+        sous_section.value = !sous_section.value;
+    
+        step.value = false;
 
 };
 
@@ -497,6 +675,8 @@ function Show_step() {
 
 }
 
+const is_spinner = ref(true);
+
 onMounted( async () => {    
 
     category.value = await api.getCategoryById(categoryId.value);
@@ -504,6 +684,12 @@ onMounted( async () => {
     guide.value = await api.getGuideById(categoryId.value, postId.value);
 
     await showSections(categoryId.value, postId.value);
+
+    if(showSections(categoryId.value, postId.value)) {
+
+        is_spinner.value = false;
+
+    }
 
 });
 
@@ -547,24 +733,19 @@ const edit_Section = async () => {
 
     if(response) {
 
-        console.log(response);
+        // console.log(response);
     
         await showSections(categoryId.value, postId.value);
 
+        // console.log(type.value);
+
+        // console.log(sections.value);
+
         ShowEdit.value = false;
 
-    }
+        Show_S_S_Edit.value = false;
 
-
-}
-
-const del_Section = async (section_id) => {
-
-    const delete_section = await api.deleteSection(categoryId.value, postId.value, section_id);
-
-    if(delete_section.success) {
-
-        await showSections(categoryId.value, postId.value);
+        Show_S_Edit.value = false
 
     }
 
@@ -587,6 +768,20 @@ const add_Section= async(e)=>{
     }
 
 }
+
+const del_Section = async (section_id) => {
+
+    const delete_section = await api.deleteSection(categoryId.value, postId.value, section_id);
+
+    if(delete_section.success) {
+
+        await showSections(categoryId.value, postId.value);
+
+    }
+
+}
+
+
 
 
 </script>

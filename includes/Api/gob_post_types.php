@@ -249,13 +249,19 @@ class gob_post_types extends WP_REST_Controller {
 
         $guide_id = $request -> get_param( 'guide_id' );
 
+        $existing_post = get_post($guide_id);
+    
+        $existing_post_title = $existing_post->post_title;
+    
+        $existing_post_content = $existing_post->post_content;
+        
         $args = array(
 
             'ID'            => $guide_id,
 
-            'post_title'    => $guide_data['title'],
-            
-            'post_content'  => $guide_data['content'],
+            'post_title'    => isset($guide_data['title']) ? $guide_data['title'] : $existing_post_title,
+        
+            // 'post_content'  => isset($guide_data['content']) ? $guide_data['content'] : $existing_post_content,
 
         );
 
@@ -263,8 +269,8 @@ class gob_post_types extends WP_REST_Controller {
 
         if( !is_wp_error($updated) ) {
 
-            return rest_ensure_response(["success" =>true, "message" => "Configuration successful", "parent_id" => $guide_id]);
-
+            return rest_ensure_response(["success" =>true, "message" => "Configuration successful", "parent_id" => $guide_id, "Results" => $args]);
+            
         } else {
 
             return rest_ensure_response(["success" => false, "message" => "registration failed"]);

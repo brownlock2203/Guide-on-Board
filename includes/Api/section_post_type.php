@@ -281,12 +281,17 @@ class section_post_type extends WP_REST_Controller {
 
 
         );
+        
 
         $updated = wp_update_post( $args );
+        
+        // $meta_key = 'sous_sections_' . $section_id;
+                
+        update_post_meta($section_id, $meta_key, $args);
 
         if( !is_wp_error($updated) ) {
 
-            return rest_ensure_response(["success" =>true, "message" => "Configuration successful", "parent_id" => $section_id]);
+            return rest_ensure_response(["success" =>true, "message" => "Configuration successful", "parent_id" => $section_id, "results" => $args]);
 
         } else {
 
