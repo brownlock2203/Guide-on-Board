@@ -41,11 +41,11 @@
 
 
                 <!-- connected -->
-                <div class="flex flex-row">
+                <!-- <div class="flex flex-row">
                     <div class="w-[40px] h-[40px] bg-black border-[#282E4B] border-[2px] rounded-full hover:border-[5px] overflow-hidden"></div>
                     <div class="w-[40px] h-[40px] bg-black border-[#282E4B] border-[2px] rounded-full hover:border-[5px]"></div>
                     <div class="w-[40px] h-[40px] bg-black border-[#282E4B] border-[2px] rounded-full hover:border-[5px]"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

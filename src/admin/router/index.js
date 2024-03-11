@@ -6,7 +6,7 @@ import CategoryPage from "admin/pages/CategoriePage.vue";
 
 import GuidePage from "admin/pages/GuidePage.vue";
 
-// import GuidePageContent from "admin/pages/GuidePage.vue";
+import Settings from "admin/pages/Settings.vue";
 
 // import Menu from "admin/pages/Menu.vue";
 
@@ -56,15 +56,15 @@ const router = createRouter({
     
     },
 
-    // {
+    {
       
-    //   path: "/gob-categorie/:categoryId/gob-guides/:postId/gob-sections/:sectionId",
+      path: "/gob-categorie/:categoryId/gob-guides/:postId/gob-sections/Settings",
       
-    //   name: "GuidePageContent",
+      name: "Settings",
       
-    //   component: GuidePageContent,
+      component: Settings,
     
-    // },
+    },
 
   ],
 });
