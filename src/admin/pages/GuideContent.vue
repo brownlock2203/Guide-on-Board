@@ -205,7 +205,7 @@
                     </svg>
                 </div>
                 
-                <div v-for="(section) in sections" :key="section.id" >
+                <div v-for="(section, key) in sections" :key="section.id" >
                     
                     <!-- Section icon and content Space -->
                     <div class="flex justify-between ml-[30px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
@@ -223,15 +223,15 @@
                         <div class="flex flex-row space-x-4">
 
                             <!-- Show sous_section -->
-                            <div  class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="show_sous_section(section.id)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section, 'transform rotate-180': sous_section }">
-                                <svg v-if="!sous_section" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="h-6 w-6">
+                            <div  class="bg-[#9ACD32] bg-opacity-10 p-[5px] rounded-lg hover:cursor-pointer hover:bg-opacity-20" @click="show_sous_section(section.id, key)" :class="{ 'transition-transform duration-500': true, 'transform rotate-0': !sous_section[key], 'transform rotate-180': sous_section[key] }">
+                                <svg v-if="!sous_section[key]" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" class="h-6 w-6">
                                     <g>
                                         <g>
                                             <path d="M505.752,358.248L271.085,123.582c-8.331-8.331-21.839-8.331-30.17,0L6.248,358.248c-8.331,8.331-8.331,21.839,0,30.17s21.839,8.331,30.17,0L256,168.837l219.582,219.582c8.331,8.331,21.839,8.331,30.17,0S514.083,366.58,505.752,358.248z"/>
                                         </g>
                                     </g>
                                 </svg>
-                                <svg v-if="sous_section" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.011 512.011" xml:space="preserve" class="h-6 w-6">
+                                <svg v-if="sous_section[key]" fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.011 512.011" xml:space="preserve" class="h-6 w-6">
                                     <g>
                                         <g>
                                             <path d="M505.752,358.248L271.085,123.582c-8.331-8.331-21.839-8.331-30.17,0L6.248,358.248c-8.331,8.331-8.331,21.839,0,30.17s21.839,8.331,30.17,0L256,168.837l219.582,219.582c8.331,8.331,21.839,8.331,30.17,0S514.083,366.58,505.752,358.248z"/>
@@ -261,7 +261,7 @@
                     </div>         
 
                     <!-- Sous_Section icon and content Space -->
-                    <div v-if="sectionId === section.id && sous_section" class="flex justify-between ml-[60px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
+                    <div v-if="sectionId === section.id && sous_section[key]" class="flex justify-between ml-[60px] bg-white pl-[30px] pr-[50px] py-[10px] flex items-center border-t border-l border-b border-gray-300 mt-[15px]">
                         
                         <!-- Folder and Section Name -->
                         <div class="flex flex-row items-center space-x-4">
@@ -657,11 +657,13 @@ function ShowPopup_S_Edit(section_id=null){
 
 }
 
-const sous_section = ref(false);
+const sous_section = ref([]);
 
-function show_sous_section(section_id) {
+function show_sous_section(section_id, key) {
         
-    sous_section.value = !sous_section.value;
+    sous_section.value[key] = !sous_section.value[key];
+
+    console.log(sous_section.value[key]);
 
     sectionId.value = section_id;
     
@@ -722,6 +724,10 @@ const showSections = async(categorie_id, guide_id) => {
     if(response) {
 
         sections.value = response;
+
+        sous_section.value = response.map(item => false) 
+
+        // console.log(sous_section.value)
 
         // console.log("Sections:", sections.value);
 
