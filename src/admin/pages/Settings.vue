@@ -9,7 +9,7 @@
         </div>
 
         <!-- Section box -->
-        <div class="relative w-full box-content flex flex-col border border-gray-400 mb-[20px] pb-[50px]">
+        <div class="relative w-full box-content flex flex-col border border-gray-400">
 
             <!-- The menu -->
                 <div class="w-full px-[35px] py-[15px] bg-white flex flex-row justify-between border-b border-gray-300 space-x-2 items-center">
@@ -112,7 +112,7 @@
                 </div>
 
                 <!-- SETTINGS CONTENT -->
-                <div class="flex flex-cols">
+                <div class="grid grid-cols-2">
 
                     <!-- GUIDE TEMPLATE -->
                     <div class="bg-white">
@@ -121,9 +121,33 @@
 
                     <!-- ACCESS -->
                     <div>
-                        Hello
+                        <p class="">Définir le mode d'accessibilité à votre projet</p>
                     </div>
                 </div>
+
+            <!-- Footer -->
+            <div class="bg-white w-full box-content flex justify-end items-center border-t border-gray-300">
+
+                <!-- Back 'n Save icons -->
+                <div class="pr-[30px] py-[15px] flex flex-row items-center space-x-4">
+
+                    <!-- Back icon -->
+                    <div class="border border-[#414DC7] text-[#414DC7] flex flex-row items-center px-[25px] py-[10px] rounded-lg hover:bg-[#414DC7] hover:text-white hover:cursor-pointer hover:drop-shadow-xl space-x-4 hover:-translate-x-1 hover:duration-300 duration-300">
+                        <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:text-white">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.27 7.75737L1.0202 11.9928L5.25576 16.2426L6.67236 14.8308L4.85801 13.0103L17.1463 13.0525C17.5532 14.219 18.6604 15.0583 19.9663 15.0642C21.6231 15.0717 22.9723 13.7346 22.9798 12.0777C22.9872 10.4209 21.6501 9.07172 19.9933 9.06427C18.6867 9.05841 17.5715 9.88865 17.1547 11.0525L4.83934 11.0102L6.68182 9.17397L5.27 7.75737ZM18.9798 12.0598C18.9823 11.5075 19.432 11.0618 19.9843 11.0643C20.5366 11.0667 20.9823 11.5165 20.9798 12.0687C20.9773 12.621 20.5276 13.0667 19.9753 13.0642C19.423 13.0618 18.9773 12.612 18.9798 12.0598Z" fill="currentColor"/>
+                        </svg>
+                        <p class="font-semibold text-[16px]">Back</p>
+                    </div>
+
+                    <!-- Save Icon -->
+                    <div class="border text-[#414DC7] border-[#414DC7] flex items-center px-[25px] py-[10px] rounded-lg hover:bg-[#414DC7] hover:text-white hover:cursor-pointer hover:drop-shadow-xl hover: space-x-4 hover:translate-x-1 hover:duration-300 duration-300">
+                        <p class="font-semibold  text-[16px]">Save</p>
+                        <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hover:text-white">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.73 7.75739L22.9798 11.9929L18.7443 16.2426L17.3277 14.8308L19.142 13.0103L6.85364 13.0525C6.44678 14.219 5.33954 15.0584 4.03368 15.0642C2.37684 15.0717 1.02767 13.7346 1.02023 12.0777C1.01279 10.4209 2.34989 9.07173 4.00673 9.06429C5.31328 9.05842 6.4285 9.88867 6.84531 11.0525L19.1607 11.0103L17.3182 9.17398L18.73 7.75739ZM5.02019 12.0598C5.01771 11.5075 4.56799 11.0618 4.01571 11.0643C3.46343 11.0667 3.01773 11.5165 3.02021 12.0687C3.02269 12.621 3.47242 13.0667 4.02469 13.0642C4.57697 13.0618 5.02267 12.612 5.02019 12.0598Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>    

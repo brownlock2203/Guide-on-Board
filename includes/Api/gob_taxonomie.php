@@ -104,7 +104,7 @@ class gob_taxonomie extends WP_REST_Controller {
 
             )
         );
-        // var_dump($taxonomy_data);
+
         if(! is_wp_error($terms)){
 
             $term_id = $terms['term_id'];
@@ -195,7 +195,6 @@ class gob_taxonomie extends WP_REST_Controller {
 
             'image' => $taxonomy_data["image"],
             
-            // 'parent' => $term_id
         );
         
         $updateTerms = wp_update_term($term_id, 'gob-categorie', $args);
@@ -293,8 +292,6 @@ class gob_taxonomie extends WP_REST_Controller {
         foreach ($terms as $term) {
 
             $thumbnail = get_term_meta($term->term_id, 'thumbnail_id', true);
-
-            // $thumbnail_id = is_array($thumbnail_id) ? $thumbnail_id : array();
 
             $categories[] = array(
 

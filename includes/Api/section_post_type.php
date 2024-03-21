@@ -150,10 +150,6 @@ class section_post_type extends WP_REST_Controller {
 
         $content = $section_data['content'];
 
-        // $parent_id = $section_data[$guide_id];
-
-        // $categorie_id = $guide_data['categorie_id'];
-
         $data = array(
 
             'post_title'   => $title,
@@ -178,18 +174,6 @@ class section_post_type extends WP_REST_Controller {
         $section_id = wp_insert_post($data);
 
             if ( !is_wp_error($section_id) ) {
-
-                // wp_set_post_parent($section_id, $guide_id);
-            
-                // wp_set_object_terms($section_id, $categorie_id, 'gob-categorie', true);
-
-                // $data = array(
-
-                //     'sous_section' => $section_data['sous_section'],
-                    
-                //     'etape'        => $section_data['etape'],
-                
-                // );
 
                 $meta_key = 'sous_sections_' . $section_id;
         
@@ -385,16 +369,6 @@ class section_post_type extends WP_REST_Controller {
                 'etape'        => isset( $meta_value['etape'] ) ? $meta_value['etape'] : '',
         
             );
-
-            // $meta_values = get_post_meta($section->ID);
-
-            // foreach ($meta_values as $meta_key => $meta_value) {
-
-            //     $meta_value = maybe_unserialize($meta_value[0]);
-            
-            //     $section_data[$meta_key] = $meta_value;
-        
-            // }
 
             $formatted_sections[] = $section_data;
     

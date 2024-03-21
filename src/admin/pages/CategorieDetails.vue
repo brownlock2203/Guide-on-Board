@@ -146,7 +146,7 @@
         <div v-for="guide in guides" :key="guide.id" class="box-border px-[5px] py-[5px] bg-white text-black border border-gray-400 border-opacity-40 rounded-xl">
         
             <!-- Info creating -->
-            <div class="pt-[35px] pb-[45px] px-[15px] bg-[#CAECE6] flex flex-col space-y-4 border border-gray-400 border-opacity-20 rounded-lg">
+            <div class="pt-[35px] pb-[30px] px-[15px] bg-[#CAECE6] flex flex-col space-y-4 border border-gray-400 border-opacity-20 rounded-lg">
 
                 <!-- Head Space -->
                 <div class="mb-[20px] flex flex-row justify-between items-center">
